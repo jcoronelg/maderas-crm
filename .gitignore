@@ -27,6 +27,8 @@
 .ionide
 
 # omitir base en application
+application/config/config.php
+application/config/database.php
 
 # omitir build en dist
 dist/build/*
