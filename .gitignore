@@ -34,16 +34,16 @@ application/config/database.php
 dist/build/*
 
 #omitir plugs en static
-static/angular/*
-static/documentos/*
-static/yadcf/*
+!static/angular/*
+!static/documentos/*
+!static/yadcf/*
 
 #omitimos todo core (no cambia)
 !system/*
 !user_guide/*
 
 #Omitimos carpeta uploads, contenido xml y pdf
-UPLOADS/*
+!UPLOADS/*
 
 #Composer dependencies
 vendor/
