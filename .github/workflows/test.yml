@@ -16,6 +16,7 @@ jobs:
         run: |
           touch application/config/config.php
           echo -e "${{ secrets.CONFIG_TEST }}" > application/config/config.php
+          rm application/config/config-example.php
 
       - name: Copy files via SSH key
         uses: appleboy/scp-action@master
