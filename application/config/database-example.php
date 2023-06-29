@@ -76,7 +76,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'DESKTOP-1O459JQ\SQLEXPRESS',
+	'hostname' => '<NOMBRE_EQUIPO>\SQLEXPRESS',
 	'username' => '',
 	'password' => '',
 	'database' => 'sisfusion',
