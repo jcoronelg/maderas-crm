@@ -1,0 +1,376 @@
+@import "_base";
+
+.cargarPlan{
+  margin-top: 65px;
+  padding: 30px 15px;
+  min-height: calc(100vh - 65px);
+  .nav-tabs-cm{
+    background: $platinumLight;
+    padding: 0;
+    li > a {
+        color: $grayDisabled!important;
+        padding: 5px 60px;
+        border-radius: 20px 20px 0 0;
+        background-color: $goldMaderas;
+        box-shadow: inset 0px -6px 8px 0px #0000002c;
+        opacity: 0.6;
+        margin-right: 5px;
+        font-weight: 500;
+        @media #{$tablets}{
+            padding: 7px 15px;
+        }
+    }
+    li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs-cm > li.active > a:focus {
+        background-color: $white;
+        opacity: 1;
+        color: $gray!important;
+        font-weight: 500;
+        box-shadow: none;
+    }
+    li > a:hover{
+        background-color: $goldMaderas;
+        opacity: 1;
+        color: $white !important;
+        box-shadow: none;
+    }
+    @media #{$smartphone}{
+        li {
+            width: 100%;
+        }
+        li > a {
+            border-radius: 20px;
+            margin-bottom: 10px;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: none;
+        }
+    }
+  }
+  .tab-content{
+    padding: 15px;
+    #boxMainForm{
+      height: 540px;
+      overflow: auto;
+      .select2-selection--multiple{
+        display: flex;
+        align-items: center;
+        background-color: $platinum!important;
+        border: none;
+        border-radius: 27px;
+        overflow: hidden !important;
+        height: auto !important;
+        .select2-selection__rendered{
+          padding: 0 10px 5px 10px;
+          .select2-selection__choice{
+            display: flex;
+            align-items: center;
+            background-color: $white;
+            height: 25px;
+            border: none;
+            border-radius: 27px;
+            padding: 0 10px;
+          }
+        }
+      }
+      #fechainicio{
+        border-radius: 27px 0 0 27px;
+      }
+      #fechafin{        
+        border-radius: 0 27px 27px 0;
+      }
+      .dates{
+        background-image: none;
+        background-color: $platinum;
+        text-align: center;
+        color: $deepGray;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+      }
+      .radio-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: $platinum;
+        height: 40px;
+        border-radius: 27px;
+        
+        input{
+          appearance: none;
+          display: none;
+        }
+        label {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: inherit;
+          width: 33%;
+          height: 90%;
+          text-align: center;
+          border-radius: 27px;
+          overflow: hidden;
+          transition: linear 0.3s;
+          color: $deepGray;
+          margin: 0;
+          cursor: pointer;
+        }
+        input[type="radio"]:checked + label {
+          background-color: $blueIndigo;
+          color: $white;
+          transition: 0.3s;
+        }
+      }
+      .boxActionsCards{
+        display: flex;
+        justify-content: space-between;
+        .btnAction{
+          width: 48%;
+          background-color: #1341761a;
+          color: $blueIndigo;
+          border-radius: 27px;
+          padding: 8px 12px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 14px;
+          border:none;
+        }
+      }
+      @media #{$smartphone}, #{$tablets}{
+        height: auto!important;
+        overflow: hidden!important;
+      }
+    }
+    .boxInfoGral{
+      position: absolute;
+      top: 0;
+      right: 20px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 999;
+      .btnDescuento{
+        background-color: #1341761a;
+        color: $blueIndigo;
+        width: 40px;
+        height: 40px;
+        border-radius: 27px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        border:none;
+        margin-left: 5px;
+      }
+      .btnAction{
+        height: 40px;
+        border: none;
+        border-radius: 27px;
+        color: $blueIndigo;
+        background-color: #1341761a;
+        margin-left: 5px;
+        padding: 0 10px;
+      }
+    }
+    .leyendItems{
+      position: absolute;
+      top: -25px;
+      right: 165px;
+      font-size: 18px;
+      .items{
+        font-weight: 400;
+      }
+      @media #{$smartphone}{
+        top: 10px;
+        right: 15px;
+      }
+      @media #{$tablets}{
+        top: 0px;
+        right: 15px;
+      }
+    }
+    #showPackage{
+      height: 520px;
+      padding: 11px 0;
+      overflow: auto;
+      .pt-4{
+        @media #{$smartphone}, #{$tablets}{
+          padding-top: 0!important;
+        }
+      }
+      .emptyCards{
+        color: $deepGray; 
+        img{
+          @media #{$smartphone}, #{$tablets}{
+            width: 40%!important;
+          }
+        }
+      }
+      .cardPlan{
+        height: 480px;
+        overflow: auto;
+        padding: 20px;
+        box-shadow: 0px 2px 9px -12px RGB(0 0 0/42%), 0 4px 20px 0px RGB(0 0 0/12%), 0 8px 10px -5px RGB(0 0 0/20%);
+        border-radius: 10px;
+        margin-bottom: 15px;
+        .title{
+          margin-bottom: 5px;
+          .title-plan{
+            color: $gray;
+          }
+          .btn-trash{
+            background-color: transparent;
+            color: $platinumScroll;
+            width: 35px;
+            height: 35px;
+            border-radius: 27px;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 13px;
+            border:none;
+            position: absolute;
+            right: 15px;
+            z-index: 999;
+            &:hover{
+              background-color: $platinum;
+            }
+          }
+        }
+        .inputPlan {
+          background-color: transparent;
+          color: $gray;
+          border-radius: 27px;
+          background-image: none;
+          padding: 8px 15px;
+          width: 100%;
+          border: 1px solid $platinumScroll;
+        }
+        .boxAllDiscounts{
+          .check__item{
+            label{
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              padding: 8px 10px;
+              border-radius: 27px;
+              margin: 5px 0;
+              cursor: pointer;
+              font-weight: 100;
+              color: $gray;
+              &:hover{
+                background-color: #1341761a;
+              }
+            }
+          }
+          .boxDetailDiscount{
+            border-radius: 10px;
+            background-color: #5a98df1a;
+            padding: 10px;
+            .txtMSI{
+              text-align: center;
+              font-weight: 400;
+              font-size: 12px;
+            }
+            .select2-selection--multiple{
+              display: flex;
+              align-items: center;
+              background-color: $white!important;
+              border: none;
+              border-radius: 7px;
+              overflow: hidden !important;
+              height: auto !important;
+              .select2-selection__rendered{
+                padding: 0 10px 5px 10px;
+                .select2-search__field{
+                  width: 100%!important;
+                }
+                .select2-selection__choice{
+                  border: none;
+                  background-color: #5a98df1a!important;
+                  border-radius: 5px;
+                  padding: 0 10px;
+                }
+              }
+            }
+
+          }
+        }
+        .default__check[type=checkbox] ~ .custom__check{
+          display: flex;
+          align-items: center;
+          height: 16px;
+          border: 2px solid $blueIndigo;
+          position: relative;
+          transition: all 0.4s ease;
+          border-radius: 27px;
+        }
+        .default__check[type=checkbox]:not(.switchbox) ~ .custom__check {
+          justify-content: center;
+          width: 16px;
+        }
+        .default__check[type=checkbox]:checked ~ .custom__check{
+          background-color: $green;
+          border: 2px solid $green;
+        }
+        .loadCard{
+          height: 250px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        @media #{$smartphone}, #{$tablets}{
+          height: auto!important;
+        }
+      }
+      .switch-label:before, .switch-label:after {
+        content: "";
+        position: absolute;
+        margin: 0;
+        outline: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+        transition: all 0.3s ease;
+      }
+      .switch-label:before {
+        width: 25%;
+        height: 14px;
+        background-color: $platinumScroll;
+        border-radius: 8px;
+      }
+      .switch-label:after {
+        width: 15px;
+        height: 15px;
+        background-color: $white;
+        border-radius: 50%;
+        box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 rgba(0, 0, 0, 0.084);
+      }
+      .switch-label .toggle--on {
+        display: none;
+      }
+      .switch-label .toggle--off {
+        display: inline-block;
+      }
+      .switch-input:checked + .switch-label:before {
+        background-color: #A5D6A7;
+      }
+      .switch-input:checked + .switch-label:after {
+        background-color: $green;
+        transform: translate(80%, -50%);
+      }
+      @media #{$smartphone}, #{$tablets}{
+        height: auto!important;
+        margin-top: 30px!important;
+      }
+    }
+    @media #{$smartphone}, #{$tablets}{
+      margin-top: 30px!important;
+    }
+  }
+  @media #{$smartphone}, #{$tablets}{
+    height: auto!important;
+  }
+}

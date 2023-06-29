@@ -1,0 +1,284 @@
+@import "_base";
+#allAppointmentsModal .table-striped thead > tr th {
+  white-space: nowrap!important;
+}
+.form-control[disabled]{
+  border-bottom: none!important;
+  opacity: .65;
+}
+.card{
+  box-shadow: 0px 2px 9px -12px RGB(0 0 0/42%), 0 4px 25px 0px RGB(0 0 0/12%), 0 8px 10px -5px RGB(0 0 0/20%);
+}
+#calendar{
+  
+  table.dataTable > thead > tr > th, table.dataTable > tbody > tr > th, table.dataTable > tfoot > tr > th, table.dataTable > thead > tr > td, table.dataTable > tbody > tr > td, table.dataTable > tfoot > tr > td {
+    white-space: nowrap!important;
+  }
+  .fc-toolbar-chunk{
+    display: flex;
+    align-items: center;
+    .fc-prev-button, .fc-next-button{
+      background-color: transparent;
+      box-shadow: none;
+      color: $platinumScroll;
+      border: none;
+      font-size: 18px;
+      padding: 0;
+      &:hover{
+        color: $cerulean;
+      }
+    }
+    .fc-today-button, .fc-appointments-button, .fc-timeGridDay-button, .fc-timeGridWeek-button, .fc-dayGridMonth-button{
+      background-color: #1341761a;
+      border: none;
+      box-shadow: none;
+      border-radius: 27px;
+      color: $gray;
+      padding: 8px 15px;
+    }
+    .fc-toolbar-title{
+        text-transform: uppercase;
+    }
+    .fc-icon-fab, .fc-icon-fas{
+      font-family: FontAwesome!important;
+    }
+    .fc-googleBtn-button{
+      background-color: transparent;
+      box-shadow: none;
+      border: none;
+      color: $redGoogle;
+      padding: 0;
+    }
+    .fc-googleLogout-button{
+      display: none!important;
+      background-color: transparent;
+      box-shadow: none;
+      border: none;
+      height: 37px;
+      width: 37px;
+      padding: 0;
+      border: 1px solid transparent;
+      img{
+        width: 100%;
+      }
+    }
+    .fc-button-active{
+      background-color: $blueIndigo;
+      color: $white;
+    }
+  }
+  
+  .fc-view-harness{
+    .fc-scrollgrid{
+      border: 1px solid $platinumLight;
+      .fc-daygrid-day{
+        border: 1px solid $platinumLight!important;
+      }
+      .fc-daygrid-block-event{
+        box-shadow: none;
+      }
+      .fc-day-other{
+        background: repeating-linear-gradient(-55deg, $cultured, $cultured 5px, $white 5px, $white 10px);
+      }
+      .fc-day-today{
+        background-color: transparent;
+        .fc-daygrid-day-top{
+          a{
+            margin: 2px;
+            background-color: $blueIndigo;
+            height: 25px;
+            width: 25px;
+            border-radius: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $white;
+            font-weight: 500;
+          }
+        }
+      }
+      .fc-daygrid-day-number{
+        font-size: 12px;
+      }
+    }
+  }
+  .fc-daygrid-day-frame{
+    padding: 3px;
+  }
+  .evtAbierto{
+    border-left: 4px solid $harlequin!important;
+  }
+  .evtFinalizado{
+    border-left: 4px solid $jellyBean!important;;
+  }
+  .fc-daygrid-event{
+    padding-left: 4px;
+  }
+  @media #{$smartphone} {
+    .selects{
+      .col-12{
+        padding: 0 15px!important;
+      }
+    }
+  }
+}
+
+.boxCodigos{
+  display: flex;
+  justify-content: center;
+  padding: 30px 0 20px 0;
+  font-size: 12px;
+  .boxStatus{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    i {
+      margin: 0 8px;
+      font-size: 15px;
+    }
+    .codeFinish{
+      color: $jellyBean;
+    }
+    .codeOpen{
+      color: $harlequin;
+    }
+    .codeAdviser{
+      color: #103f7533;
+    }
+    .codeManager{
+      color: #dfdac4a3;
+    }
+  }
+}
+
+#feedbackModal{
+  .radio-with-Icon{
+    input[type="radio"]:checked ~ label i{
+      color: $deepGray;
+    }
+    i{
+      color: $platinum;
+      &:hover{
+        color: $deepGray;
+      }
+    }
+  }
+}
+.iconMod{
+  color: $platinumScroll;
+}
+
+#allAppointmentsModal{
+  .close{
+    font-size: 25px;
+    font-weight: 300;
+    position: absolute;
+    top: 7px;
+    right: 10px;
+  }
+  .table-striped{
+    width: 100%!important;
+    thead > tr {
+      background-color: transparent!important;
+      color: $gray;
+      th{
+        border-right: 1px solid $platinumScroll;
+        font-weight: 300;
+        &:last-child{
+          border-right: none;
+        }
+      }
+      .fa-info-circle{
+        color: $grey9;
+      }
+    }
+    tbody{
+      tr{
+        &:hover{
+          background-color: transparent;
+        }
+        td{
+          padding: 0 5px!important;
+          border-right: 1px solid $platinumScroll;
+          &:nth-child(4){
+            display:flex;
+            justify-content:center;
+            padding: 10px 0!important;
+          }
+          &:nth-child(4):focus-within{
+            border: 2px solid $blueSubmit;
+          }
+          &:nth-child(4){
+            border-bottom: 2px solid transparent;
+            border-top: 2px solid transparent;
+          }
+          &:nth-child(4):hover{
+            border: 2px solid $blueSubmit;
+          }
+          &:last-child{
+            border-right: none;
+          }
+        }
+      }
+      select{
+        width:100%!important;
+        background-image: none;
+        color: $blueSubmit;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        background: url(../img/siguiente.png);
+        background-repeat:no-repeat;
+        background-size:16px 17px;
+        background-position:right;
+        &:focus{
+          box-shadow: none!important;
+        }
+      }
+      label{
+        color: $gray!important;
+        font-weight: 300;
+      }
+      .textarea{
+        border: none;
+        border-radius: 0;
+        background-color: transparent;
+        overflow: auto;
+        resize: none;
+        width: 100%;
+        height: 25px;
+      }
+    }
+    .tooltip-inner {
+      text-align: justify;
+      background-color: $white!important;
+      color: $deepGray;
+    }
+  }
+  .dataTables_filter label{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+    input {
+      border: 0px !important;
+      background: $platinum;
+      border-radius: 27px;
+      padding: 0px 10px;
+      height: 38px;
+      text-align: left;
+    }
+    #input_img {
+      position: absolute;
+      bottom: 2px;
+      right: 12px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+  .pagination > .active > a{
+    background-color: transparent;
+    color: $blueIndigo;
+    font-weight: 900;
+  }
+}

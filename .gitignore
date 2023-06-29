@@ -1,0 +1,61 @@
+
+# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode
+
+### .idea ###
+.idea
+.idea/*
+
+### VisualStudioCode ###
+.vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+
+# omitir base en application
+!application/cache/*
+!application/config/*
+!application/core/*
+!application/helpers/*
+!application/hooks/*
+!application/libraries/*
+!application/logs/*
+!application/migrations/*
+!application/third_party/*
+
+# omitir build en dist
+dist/build/*
+
+#omitir plugs en static
+static/angular/*
+static/documentos/*
+static/yadcf/*
+
+#omitimos todo core (no cambia)
+system/*
+user_guide/*
+
+#Omitimos carpeta uploads, contenido xml y pdf
+UPLOADS/*
+
+#Composer dependencies
+vendor/
+composer.lock
+dist/css/MARIA DEL CARMEN2022-04-07940b801cbed1ce3d35c85f21921daeb0.pdf
+
+#Credenciales API
+client_secret.json
