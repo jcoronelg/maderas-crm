@@ -1,0 +1,7 @@
+.gitignore
+!.gitignore
+!autFechainicio
+!contrato
+!contratoFirmado
+!corrida
+!expediente

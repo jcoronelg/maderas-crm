@@ -1,0 +1,13 @@
+*
+!.gitignore
+!carpetas
+!cliente
+!cumplimiento
+!evidence_token
+!evidencia_mktd
+!evidencia_prestamo_auto
+!evidencia_prospectos
+!extranjero
+!extranjero_suma
+!manuales
+!postventa
